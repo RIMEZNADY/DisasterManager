@@ -1,0 +1,72 @@
+/* application.css */
+
+/* Basic Layout Styles */
+.auth-body {
+    -fx-padding: 20px;
+    -fx-background-color: #f4f4f4;
+    -fx-alignment: center;
+}
+
+.auth-box {
+    -fx-background-color: white;
+    -fx-padding: 20px;
+    -fx-border-radius: 8px;
+    -fx-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    -fx-pref-width: 450px;
+    -fx-max-width: 400px;
+}
+
+/* Title Label */
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+.error-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: red;
+}
+
+/* Input Field Styles */
+.input-field {
+    -fx-pref-width: 350px;
+    -fx-padding: 10px;
+    -fx-margin-bottom: 15px;
+    -fx-border-width: 1px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 4px;
+    -fx-font-size: 14px;
+}
+
+.input-field:focused {
+    -fx-border-color: #007bff;
+    -fx-background-color: transparent;
+}
+
+/* Button Styles */
+.action-button {
+    -fx-pref-width: 225px;
+    -fx-padding: 12px;
+    -fx-font-size: 16px;
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-border-radius: 4px;
+    -fx-cursor: hand;
+}
+
+.action-button:hover {
+    -fx-background-color: #0056b3;
+}
+
+/* Toggle Button Styles */
+.toggle-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #007bff;
+    -fx-border: none;
+    -fx-text-decoration: underline;
+    -fx-cursor: hand;
+}
+
+.toggle-button:hover {
+    -fx-text-fill: #0056b3;
+}

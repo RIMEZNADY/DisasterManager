@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.project.jaba24.controllers.authController"
+            stylesheets="@application.css"
+            prefHeight="700.0" prefWidth="800.0">
+    <HBox  prefWidth="800" prefHeight="700" spacing="20">
+        <VBox styleClass="auth-body" alignment="CENTER" spacing="20">
+            <VBox styleClass="auth-box" alignment="CENTER" spacing="10">
+                <!-- Title Label -->
+                <Label layoutX="250.0" layoutY="100.0" text="Login Page" styleClass="title-label" />
+
+                <!-- Username Field -->
+                <TextField fx:id="usernameField" promptText="Username" styleClass="input-field" visible="false" managed="false" />
+                <Label fx:id="usernameFailedLabel" text="Username is required" styleClass="error-label" visible="false" managed="false"/>
+
+                <!-- Email Field (only visible in Register mode) -->
+                <TextField fx:id="emailField"  promptText="Email" styleClass="input-field"  />
+                <Label fx:id="emailFailedLabel" text="Email is required" styleClass="error-label" visible="false" managed="false"/>
+                <!-- Password Field -->
+                <PasswordField fx:id="passwordField" promptText="Password" styleClass="input-field" />
+                <Label fx:id="passwordFailedLabel" text="Password is required" styleClass="error-label" visible="false" managed="false"/>
+                <!-- Confirm Password Field (only visible in Register mode) -->
+                <PasswordField fx:id="confirmPasswordField" managed="false" promptText="Confirm Password" styleClass="input-field" visible="false" />
+                <Label fx:id="confirmPasswordFailedLabel" text="Passwords do not match" styleClass="error-label" visible="false" managed="false"/>
+                <!-- Location Field -->
+                <TextField fx:id="locationField"  promptText="where are you from?" styleClass="input-field" visible="false" managed="false"  />
+                <Label fx:id="locationFailedLabel" text="Location is required" styleClass="error-label" visible="false" managed="false"/>
+                <!-- Action Button (Login/Register) -->
+                <Button fx:id="authButton" layoutX="250.0" layoutY="300.0" onAction="#handleAuth" text="Login" styleClass="action-button"/>
+
+                <!-- Toggle Button (to switch between Login/Registration) -->
+                <Button fx:id="toggleAuthButton" layoutX="250.0" layoutY="350.0" onAction="#handleToggleAuth" text="Don't have an account? Register" styleClass="toggle-button"/>
+            </VBox>
+        </VBox>
+        <HBox prefWidth="400" prefHeight="700" alignment="CENTER" style="-fx-background-color: linear-gradient(to bottom, #1e3c72, #2a5298);">
+            <Label text="GET STARTED NOW!" style="-fx-text-fill: white; -fx-font-size: 24px;"/>
+        </HBox>
+    </HBox>
+</AnchorPane>

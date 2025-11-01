@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.WebView?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.text.Text?>
+<BorderPane fx:controller="com.project.jaba24.controllers.dashBoardController"
+            xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@dashboard-style.css">
+
+    <!-- Header Section -->
+    <top>
+        <HBox spacing="20" styleClass="header-section" alignment="CENTER">
+            <!-- Buttons for Reports, Disasters, Jobs -->
+            <Button fx:id="disasterTab" text="Disasters" onAction="#showDisasters" styleClass="selected" />
+            <Button fx:id="alertTab" text="Alerts" onAction="#showAlerts" styleClass="header-button" />
+            <Button fx:id="jobTab" text="Humanitarian Jobs" onAction="#showJobs" styleClass="header-button" />
+            <Button fx:id="guideTab" text="Guides" onAction="#showGuides" styleClass="header-button" />
+           <!-- Spacer to push language and account buttons to the right -->
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <!-- Language and Account Buttons -->
+            <Button fx:id="accountButton" onAction="#showUserAccount" text="A" styleClass="account-button"/>
+        </HBox>
+    </top>
+
+    <!-- Left Container -->
+    <left>
+        <VBox styleClass="left-container" prefWidth="500">
+            <!-- Filter Section (Visible for all sections) -->
+            <VBox fx:id="filteroptions" spacing="10">
+                <styleClass>
+                    <String fx:value="filter-section"/>
+                </styleClass>
+                <Label text="Filter by:"/>
+                <ComboBox fx:id="disasterTypeFilter" promptText="Disaster Type" maxWidth="Infinity"/>
+                <TextField fx:id="countryFilter" promptText="Country" maxWidth="Infinity" styleClass="input-field"/>
+                <HBox spacing="10">
+                    <DatePicker fx:id="startDate" promptText="Start Date" HBox.hgrow="ALWAYS"/>
+                    <DatePicker fx:id="endDate" promptText="End Date" HBox.hgrow="ALWAYS"/>
+                </HBox>
+                <Button fx:id="applyFilterBtn" text="Apply Filters" onAction="#applyFilters" maxWidth="Infinity"/>
+            </VBox>
+            <VBox visible="false" managed="false" fx:id="humanitarianJobsDetails" styleClass="humanitarian-jobs-details">
+                <Label text="Humanitarian Jobs" styleClass="section-title"/>
+                <Text text="Find and apply for humanitarian jobs around the world." styleClass="section-description"/>
+            </VBox>
+
+            <VBox styleClass="reports-container" prefWidth="500" VBox.vgrow="ALWAYS">
+                <ListView prefWidth="500" styleClass="reports-container" fx:id="disasterListView">
+<!--                    <items>-->
+<!--                        <FXCollections fx:factory="observableArrayList">-->
+<!--                            <HBox styleClass="disaster-box">-->
+<!--                                <VBox>-->
+<!--                                    <Text text="Disaster Title" styleClass="disaster-title"/>-->
+<!--                                    <Text text="Date" styleClass="disaster-date"/>-->
+<!--                                    <Text text="Status: On-going" styleClass="disaster-status"/>-->
+<!--                                </VBox>-->
+<!--                                <Region HBox.hgrow="ALWAYS"/>-->
+<!--                                <Button text="Pin" styleClass="pin-button"/>-->
+<!--                            </HBox>-->
+<!--                        </FXCollections>-->
+<!--                    </items>-->
+                </ListView>
+                <ListView prefWidth="500" visible="false" managed="false" fx:id="jobsListView">
+<!--                    <items>-->
+<!--                        <FXCollections fx:factory="observableArrayList">-->
+<!--                            <HBox styleClass="job-box">-->
+<!--                                <VBox>-->
+<!--                                    <Text text="Job Title 1" styleClass="job-title"/>-->
+<!--                                    <HBox>-->
+<!--                                        <Text text="Location: " styleClass="job-variables"/>-->
+<!--                                        <Text text="City, Country" styleClass="job-content"/>-->
+<!--                                    </HBox>-->
+<!--                                    <HBox>-->
+<!--                                        <Text text="Status: " styleClass="job-variables"/>-->
+<!--                                        <Text text="Open" styleClass="job-content"/>-->
+<!--                                    </HBox>-->
+<!--                                    <HBox>-->
+<!--                                        <Text text="Creating Date: " styleClass="job-variables"/>-->
+<!--                                        <Text text="2023-12-31" styleClass="job-content"/>-->
+<!--                                    </HBox>-->
+<!--                                    <HBox>-->
+<!--                                        <Text text="Closing Date:" styleClass="job-variables"/>-->
+<!--                                        <Text text=" 2023-12-31" styleClass="job-content"/>-->
+<!--                                    </HBox>-->
+<!--                                    <VBox>-->
+<!--                                        <Text text="How to Apply: " styleClass="job-variables"/>-->
+<!--                                        <Text text="Send your CV to url " styleClass="job-content"/>-->
+<!--                                    </VBox>-->
+<!--                                </VBox>-->
+<!--                                <Region HBox.hgrow="ALWAYS"/>-->
+<!--                                <Button text="Pin" styleClass="pin-button"/>-->
+<!--                            </HBox>-->
+<!--                        </FXCollections>-->
+<!--                    </items>-->
+                </ListView>
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- Right Container with Map -->
+    <center>
+        <WebView fx:id="webView">
+            <styleClass>
+                <String fx:value="map-view"/>
+            </styleClass>
+        </WebView>
+    </center>
+</BorderPane>

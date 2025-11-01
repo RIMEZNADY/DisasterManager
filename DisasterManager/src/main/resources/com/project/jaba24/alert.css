@@ -1,0 +1,17 @@
+/* styles.css */
+#alertTitle {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: red;
+}
+
+#alertMessage {
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+}
+
+#acknowledgeButton {
+    -fx-background-color: #ff0000;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}

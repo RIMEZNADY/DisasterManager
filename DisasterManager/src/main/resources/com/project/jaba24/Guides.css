@@ -1,0 +1,43 @@
+/* ComboBox (Dropdown) Styling */
+.combo-box {
+    -fx-background-color: #ccf2ff; /* Light blue background */
+    -fx-border-color: #80d4ff; /* Medium blue border */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-background-radius: 5px;
+    -fx-padding: 5px; /* Internal padding */
+    -fx-font-size: 14px; /* Adjust font size */
+    -fx-text-fill: #004d80; /* Deep blue for text */
+}
+
+.combo-box:hover {
+    -fx-background-color: #b3e0ff; /* Lighter blue on hover */
+}
+
+/* ComboBox Popup Menu (Dropdown Items) */
+.combo-box-popup .list-view {
+    -fx-background-color: #ccf2ff; /* Light blue background for dropdown */
+    -fx-border-color: #80d4ff; /* Medium blue border */
+    -fx-control-inner-background: #ccf2ff; /* Inner background */
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: transparent; /* Transparent by default */
+    -fx-text-fill: #004d80; /* Deep blue text */
+    -fx-font-size: 14px; /* Consistent font size */
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #b3e0ff; /* Lighter blue hover effect */
+    -fx-text-fill: #003366; /* Slightly darker blue text on hover */
+}
+
+/* ComboBox Arrow Button */
+.combo-box .arrow {
+    -fx-background-color: #80d4ff; /* Medium blue arrow background */
+    -fx-padding: 5px;
+    -fx-background-radius: 5px; /* Match the box's rounded corners */
+}
+
+.combo-box .arrow:hover {
+    -fx-background-color: #4da6ff; /* Lighter blue on hover */
+}

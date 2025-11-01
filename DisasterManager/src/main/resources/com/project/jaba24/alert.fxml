@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import java.net.URL?>
+<AnchorPane
+        stylesheets="@alert.css"
+        xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.jaba24.controllers.AlertController">
+    <children>
+        <VBox alignment="CENTER" spacing="15" prefWidth="400" prefHeight="200" AnchorPane.topAnchor="50" AnchorPane.leftAnchor="50">
+            <Label text="Disaster Alert!" fx:id="alertTitle" />
+            <Label text="An ongoing disaster has been reported in your country. Stay safe and follow official guidelines." fx:id="alertMessage" wrapText="true" />
+            <Button text="Acknowledge" fx:id="acknowledgeButton" onAction="#handleAcknowledge" />
+        </VBox>
+    </children>
+</AnchorPane>

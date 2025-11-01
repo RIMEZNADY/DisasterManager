@@ -1,0 +1,71 @@
+/* Main container */
+.root {
+    -fx-background-color: #e0f7fa; /* Light blue background */
+    -fx-padding: 20;
+    -fx-alignment: center; /* Center alignment */
+    -fx-font-family: "Arial", sans-serif;
+}
+
+/* Form container with border */
+.form-container {
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-border-color: #0288d1; /* Light blue border */
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+}
+
+/* Home button at top-left */
+.header-button {
+    -fx-background-color: #0288d1; /* Light blue */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-border-color: #0288d1;
+    -fx-cursor: hand;
+}
+
+.header-button:hover {
+    -fx-background-color: #01579b; /* Darker blue */
+}
+
+/* Labels */
+.label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #333333; /* Dark gray */
+    -fx-font-weight: bold;
+}
+
+/* Text fields and password fields */
+.text-field, .password-field {
+    -fx-font-size: 14px;
+    -fx-padding: 8;
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #007bb5; /* Blue focus effect */
+}
+
+/* Update profile button */
+.button {
+    -fx-background-color: #0288d1; /* Light blue */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-border-color: #0288d1;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #01579b; /* Darker blue on hover */
+}
